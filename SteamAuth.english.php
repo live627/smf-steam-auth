@@ -8,6 +8,6 @@ $txt['steam_auth_api_key'] = 'Steam API key';
 $txt['steam_auth_api_key_link'] = '<a href="http://steamcommunity.com/dev/apikey" target="_blank">Get one</a>';
 
 $txt['steam'] = 'Steam';
-$txt['steam_auth_x'] = 'User has canceled authentication';
+$txt['steam_auth_x'] = 'User has cancelled authentication';
 
 ?>
