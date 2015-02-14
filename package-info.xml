@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.simplemachines.org/xml/package-info">
+<package-info xmlns="http://www.simplemachines.org/xml/package-info" xmlns:smf="http://www.simplemachines.org/">
+	<id>live627:steamauth</id>
+	<name>Steam Authentication</name>
+	<version>1.0</version>
+	<type>modification</type>
+
+	<install for="2.0 - 2.0.99">
+		<database>install.php</database>
+		<require-file name="openid.php" destination="$sourcedir" />
+		<require-file name="SteamAuth.php" destination="$sourcedir" />
+		<require-file name="SteamAuth.template.php" destination="$themedir" />
+		<require-file name="SteamAuth.english.php" destination="$languagedir" />
+	</install>
+
+	<uninstall for="2.0 - 2.0.99">
+		<code>uninstall-required.php</code>
+		<remove-file name="$sourcedir/openid.php" />
+		<remove-file name="$sourcedir/SteamAuth.php" />
+		<remove-file name="$themedir/SteamAuth.template.php" />
+		<remove-file name="$languagedir/SteamAuth.english.php" />
+	</uninstall>
+
+</package-info>
