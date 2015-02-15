@@ -8,7 +8,11 @@ This mod will allow users to login via the Steam OpenID integration (OpenID is a
 
 User will be silently created using data obtained from Steam: player name, avatar, and date created.
 
-- **Uses LightOpenID**
+##Foreword
+
+Thanks goes to:
+- JTX for the original steam openid script (http://pastebin.com/6vZT4RhD)
+- The LightopenID library (http://gitorious.org/lightopenid)
  * The library requires PHP >= 5.1.2 with curl or http/https stream wrappers enabled.
  * @author Mewp
  * @copyright Copyright (c) 2010, Mewp
