@@ -75,7 +75,7 @@ function steam_auth_load_theme()
 								'extra_register_vars' => array(
 									'member_name' => 'steamuser-' . $steamid,
 									'real_name' => $player->personaname,
-									'avatar' => $player->avatarmedium,
+									'avatar' => str_replace('https://', 'http://', $player->avatarmedium),
 								),
 								'theme_vars' => array(),
 							);
