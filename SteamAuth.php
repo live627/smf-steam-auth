@@ -40,6 +40,14 @@ function steam_auth_load_theme()
 					$ptn = "/^http:\/\/steamcommunity\.com\/openid\/id\/(7[0-9]{15,25}+)$/";
 					preg_match($ptn, $id, $matches);
 					$steamid = $matches[1];
+					
+					//looks like there was a breaking change in the response - this will patch it up
+					if (empty($steamid))
+					{
+						$ptn = "/^https:\/\/steamcommunity\.com\/openid\/id\/(7[0-9]{15,25}+)$/";
+						preg_match($ptn, $id, $matches);
+						$steamid = $matches[1];						
+					}
 
 					$request = $smcFunc['db_query']('', '
 						SELECT passwd, id_member, id_group, lngfile, is_activated, email_address, additional_groups, member_name, password_salt,
